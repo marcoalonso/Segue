@@ -7,7 +7,7 @@
 
 import UIKit
 
-//Hola 
+//Hola
 class ViewController: UIViewController {
 
     @IBOutlet weak var nombreTF: UITextField!
@@ -19,7 +19,6 @@ class ViewController: UIViewController {
 
     @IBAction func enviarDatosButton(_ sender: UIButton) {
         let nombre = nombreTF.text
-        prepare(for: <#T##UIStoryboardSegue#>, sender: <#T##Any?#>)
     }
 }
 
