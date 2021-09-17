@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601BAFA926F4DB8E00D3A71A /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BAFA826F4DB8E00D3A71A /* RegistroViewController.swift */; };
+		601BAFAB26F4DF0E00D3A71A /* Menu2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BAFAA26F4DF0E00D3A71A /* Menu2ViewController.swift */; };
 		60225F4726EF8C9C00D35052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60225F4626EF8C9C00D35052 /* AppDelegate.swift */; };
 		60225F4926EF8C9C00D35052 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60225F4826EF8C9C00D35052 /* SceneDelegate.swift */; };
 		60225F4B26EF8C9C00D35052 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60225F4A26EF8C9C00D35052 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		601BAFA826F4DB8E00D3A71A /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		601BAFAA26F4DF0E00D3A71A /* Menu2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu2ViewController.swift; sourceTree = "<group>"; };
 		60225F4326EF8C9C00D35052 /* Segue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Segue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60225F4626EF8C9C00D35052 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60225F4826EF8C9C00D35052 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				60225F4F26EF8C9D00D35052 /* Assets.xcassets */,
 				60225F5126EF8C9D00D35052 /* LaunchScreen.storyboard */,
 				60225F5426EF8C9D00D35052 /* Info.plist */,
+				601BAFA826F4DB8E00D3A71A /* RegistroViewController.swift */,
+				601BAFAA26F4DF0E00D3A71A /* Menu2ViewController.swift */,
 			);
 			path = Segue;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				60225F4B26EF8C9C00D35052 /* ViewController.swift in Sources */,
+				601BAFA926F4DB8E00D3A71A /* RegistroViewController.swift in Sources */,
+				601BAFAB26F4DF0E00D3A71A /* Menu2ViewController.swift in Sources */,
 				60225F4726EF8C9C00D35052 /* AppDelegate.swift in Sources */,
 				60225F4926EF8C9C00D35052 /* SceneDelegate.swift in Sources */,
 			);

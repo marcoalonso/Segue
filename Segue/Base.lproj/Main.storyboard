@@ -3,18 +3,58 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Registro View Controller-->
         <scene sceneID="E0s-oP-2HC">
             <objects>
-                <viewController id="psC-kU-9Yu" sceneMemberID="viewController">
+                <viewController id="psC-kU-9Yu" customClass="RegistroViewController" customModule="Segue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vMd-xN-gEi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Regisro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uB-aA-yW6">
+                                <rect key="frame" x="103" y="71" width="209" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVh-LC-HPO">
+                                <rect key="frame" x="10" y="75" width="72" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="Itmorelia" renderingMode="template"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="O7E-mc-1I3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV2-3p-VJf">
+                                <rect key="frame" x="105" y="182" width="229" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
+                                <state key="normal" title="Regresar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="regresarButton:" destination="psC-kU-9Yu" eventType="touchUpInside" id="6sL-qI-qdA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKl-3M-1Ka">
+                                <rect key="frame" x="127" y="296" width="188" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <state key="normal" title="Avanzar"/>
+                                <connections>
+                                    <segue destination="o7Z-yT-qX3" kind="show" id="Xi0-ZW-7K2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BSu-RN-yw6"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
@@ -22,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBr-zW-5cO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-801" y="357"/>
+            <point key="canvasLocation" x="1064" y="-267"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -54,7 +94,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="enviarDatosButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="os0-c7-rSk"/>
-                                    <segue destination="psC-kU-9Yu" kind="presentation" modalTransitionStyle="crossDissolve" id="ia6-Tc-HDi"/>
+                                    <segue destination="psC-kU-9Yu" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="ia6-Tc-HDi"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Itmorelia" translatesAutoresizingMaskIntoConstraints="NO" id="q57-7p-w4d">
@@ -71,34 +111,70 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nHO-ws-G3T"/>
                     <connections>
                         <outlet property="nombreTF" destination="t0d-Pe-KY8" id="jmX-TX-YNQ"/>
-                        <segue destination="o7Z-yT-qX3" kind="show" id="RAY-Z1-St2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="44"/>
+            <point key="canvasLocation" x="371" y="-257"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu2 View Controller-->
         <scene sceneID="S5z-Gb-0aU">
             <objects>
-                <viewController id="o7Z-yT-qX3" sceneMemberID="viewController">
+                <viewController id="o7Z-yT-qX3" customClass="Menu2ViewController" customModule="Segue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="STp-Xh-tav">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qkb-Dl-chF">
+                                <rect key="frame" x="98" y="175" width="187" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="85"/>
+                                <state key="normal" title="Inicio"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="znV-IP-YVf">
+                                <rect key="frame" x="10" y="10" width="354" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFw-rd-eHJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ZeT-3X-IE0"/>
+                                            <constraint firstAttribute="width" constant="50" id="uyL-L2-akX"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="regresarBtn:" destination="o7Z-yT-qX3" eventType="touchUpInside" id="r5h-13-TI0"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzf-7B-E7C">
+                                        <rect key="frame" x="60" y="0.0" width="294" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="67"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="82M-Bv-6Wh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="znV-IP-YVf" firstAttribute="leading" secondItem="82M-Bv-6Wh" secondAttribute="leading" constant="10" id="A6r-vm-3Y4"/>
+                            <constraint firstItem="82M-Bv-6Wh" firstAttribute="trailing" secondItem="znV-IP-YVf" secondAttribute="trailing" constant="50" id="Tuq-ah-OdZ"/>
+                            <constraint firstItem="znV-IP-YVf" firstAttribute="top" secondItem="82M-Bv-6Wh" secondAttribute="top" constant="10" id="lgq-Zg-1AM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i47-ja-p5w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8I-Wz-JYs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="39"/>
+            <point key="canvasLocation" x="1735" y="-273"/>
         </scene>
     </scenes>
     <resources>
         <image name="Itmorelia" width="700" height="696"/>
+        <image name="back" width="900" height="800"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
